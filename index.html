@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web</title>
+  <style>
+    a{color:blue;}
+  </style>
+</head>
+<body>
+  <h1><a href="index.html">Web</a></h1>
+  <!-- <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';document.querySelector('body').style.color='white';"> -->
+  <!-- <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';document.querySelector('body').style.color='black';"> -->
+  <input id="btn" type="button" value="night" onclick="
+    var bodyTag=document.querySelector('body');
+    if(this.value=='night'){
+      bodyTag.style.backgroundColor='black';
+      bodyTag.style.color='white';
+      this.value='day';
+    }else{
+      bodyTag.style.backgroundColor='white';
+      bodyTag.style.color='black';
+      this.value='night';
+    }
+  ">
+  <ol>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">javaScript</a></li>
+  </ol>
+  <h2>WEB이란 무엇인가?</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut architecto ex sequi, impedit debitis quidem excepturi nulla consectetur maiores soluta sint beatae, dolores saepe facilis aliquid similique nemo aliquam sed!
+    Placeat quos non deleniti veniam eos doloremque sapiente odit natus, in atque hic laboriosam alias necessitatibus totam magni qui, sint, commodi molestiae odio vero quibusdam. Nisi natus quasi a adipisci.
+    Architecto, natus quia? Unde, eius nesciunt accusantium nostrum error molestiae natus nobis numquam facilis totam ut. Commodi, quae animi facilis dicta, quo et quidem voluptatem perferendis maxime totam, incidunt natus?
+    Sit rerum inventore debitis quod odit sequi sunt nostrum unde voluptates amet, commodi, sapiente minima suscipit pariatur aspernatur quaerat corporis in magni perferendis repellendus voluptatum incidunt. Reprehenderit incidunt placeat labore!
+    Iusto commodi et, dolorum nesciunt eos nihil iste mollitia debitis tenetur modi autem quo sunt itaque rem corporis molestiae ut eius repellat quas! Ullam dolorem ipsam quibusdam, soluta mollitia enim!
+  </p>
+</body>
+</html>
