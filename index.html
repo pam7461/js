@@ -23,14 +23,14 @@
         cnt=cnt+1;
       }
     }
-    function bodyBgColor(bgColor){
-      var bodyTag=document.querySelector('body');
-      bodyTag.style.backgroundColor=bgColor;
-    }
-    function bodyColor(color){
-      var bodyTag=document.querySelector('body');
-      bodyTag.style.color=color;
-    }
+    // function bodyBgColor(bgColor){
+    //   var bodyTag=document.querySelector('body');
+    //   bodyTag.style.backgroundColor=bgColor;
+    // }
+    // function bodyColor(color){
+    //   var bodyTag=document.querySelector('body');
+    //   bodyTag.style.color=color;
+    // }
     function inputValue(inputTxt){
       var inputTag=document.querySelectorAll('input');
       var inputLength=inputTag.length;
@@ -41,22 +41,35 @@
         }
     }
 
+    var baseColor;
+    baseColor={
+      bodyBgColor:function(bgColor){
+        var bodyTag=document.querySelector('body');
+        bodyTag.style.backgroundColor=bgColor;
+      },
+      bodyColor:function(color){
+        var bodyTag=document.querySelector('body');
+        bodyTag.style.color=color;
+      }
+    }
+
     function setColor(self){
       if(self.value=='night'){
         // 야간
         linkColor('red');
-        bodyBgColor('black');
-        bodyColor('white');
+        baseColor.bodyBgColor('black');
+        baseColor.bodyColor('white');
         inputValue('day');
 
       }else{
         // 주간
         linkColor('blue');
-        bodyBgColor('white');
-        bodyColor('black');
+        baseColor.bodyBgColor('white');
+        baseColor.bodyColor('black');
         inputValue('night')  ;
       }
     }
+    console.log('black');
   </script>
   <ol>
     <li><a href="#">HTML</a></li>
