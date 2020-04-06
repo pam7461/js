@@ -14,11 +14,23 @@
   <!-- <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';document.querySelector('body').style.color='black';"> -->
   <input id="btn" type="button" value="night" onclick="
     var bodyTag=document.querySelector('body');
+    var aTag=document.querySelectorAll('a');
+    var aLength=aTag.length;
     if(this.value=='night'){
+      var cnt=0;
+      while(cnt<aLength){
+        aTag[cnt].style.color='red';
+        cnt=cnt+1;
+      }
       bodyTag.style.backgroundColor='black';
       bodyTag.style.color='white';
       this.value='day';
     }else{
+      var cnt=0;
+      while(cnt<aLength){
+        aTag[cnt].style.color='blue';
+        cnt=cnt+1;
+      }
       bodyTag.style.backgroundColor='white';
       bodyTag.style.color='black';
       this.value='night';
@@ -37,5 +49,17 @@
     Sit rerum inventore debitis quod odit sequi sunt nostrum unde voluptates amet, commodi, sapiente minima suscipit pariatur aspernatur quaerat corporis in magni perferendis repellendus voluptatum incidunt. Reprehenderit incidunt placeat labore!
     Iusto commodi et, dolorum nesciunt eos nihil iste mollitia debitis tenetur modi autem quo sunt itaque rem corporis molestiae ut eius repellat quas! Ullam dolorem ipsam quibusdam, soluta mollitia enim!
   </p>
+  <input id="btn" type="button" value="night" onclick="
+    var bodyTag=document.querySelector('body');
+    if(this.value=='night'){
+      bodyTag.style.backgroundColor='black';
+      bodyTag.style.color='white';
+      this.value='day';
+    }else{
+      bodyTag.style.backgroundColor='white';
+      bodyTag.style.color='black';
+      this.value='night';
+    }
+  ">
 </body>
 </html>
