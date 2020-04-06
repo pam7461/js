@@ -14,41 +14,47 @@
   <!-- <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';document.querySelector('body').style.color='black';"> -->
   <input id="btn" type="button" value="night" onclick="setColor(this);">
   <script>
-    function setColor(self){
-      var bodyTag=document.querySelector('body');
+    function linkColor(txtColor){
       var aTag=document.querySelectorAll('a');
+      var aLen=aTag.length;
+      var cnt=0;
+      while(cnt<aLen){
+        aTag[cnt].style.color=txtColor;
+        cnt=cnt+1;
+      }
+    }
+    function bodyBgColor(bgColor){
+      var bodyTag=document.querySelector('body');
+      bodyTag.style.backgroundColor=bgColor;
+    }
+    function bodyColor(color){
+      var bodyTag=document.querySelector('body');
+      bodyTag.style.color=color;
+    }
+    function inputValue(inputTxt){
       var inputTag=document.querySelectorAll('input');
-      var aLength=aTag.length;
       var inputLength=inputTag.length;
-      if(self.value=='night'){
-        var cnt=0;
-        while(cnt<aLength){
-          aTag[cnt].style.color='red';
-          cnt=cnt+1;
-        }
-        bodyTag.style.backgroundColor='black';
-        bodyTag.style.color='white';
-        
-        var cnt2=0;
+      var cnt2=0;
         while(cnt2<inputLength){
-          inputTag[cnt2].value='day';
+          inputTag[cnt2].value=inputTxt;
           cnt2=cnt2+1;
         }
+    }
+
+    function setColor(self){
+      if(self.value=='night'){
+        // 야간
+        linkColor('red');
+        bodyBgColor('black');
+        bodyColor('white');
+        inputValue('day');
 
       }else{
-        var cnt=0;
-        while(cnt<aLength){
-          aTag[cnt].style.color='blue';
-          cnt=cnt+1;
-        }
-        bodyTag.style.backgroundColor='white';
-        bodyTag.style.color='black';
-
-        var cnt2=0;
-        while(cnt2<inputLength){
-          inputTag[cnt2].value='night';
-          cnt2=cnt2+1;
-        }        
+        // 주간
+        linkColor('blue');
+        bodyBgColor('white');
+        bodyColor('black');
+        inputValue('night')  ;
       }
     }
   </script>
