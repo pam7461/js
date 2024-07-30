@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result{  
+            display:none;          
+            height:400px;
+            background:red;
+            transition:height 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn01" class="btn">결과상자 감추기(slide up)</button>
+    <button id="btn02" class="btn">결과상자 나타나기(slide down)</button>
+    <button id="btn03" class="btn">결과상자에 글자출력(innerHTML)</button>
+    <button id="btn04" class="btn">결과상자 글 가져오기(innerHTML)</button>
+    <button id="btn05" class="btn">결과상자 감추기(none)</button>
+    <p>위에 버튼을 클릭하세요</p>
+    <div class="result" id="result"></div>
+    <script>
+        let _btn01 = document.querySelector('#btn01');
+        let _btn02 = document.querySelector('#btn02');
+        let _btn03 = document.querySelector('#btn03');
+        let _btn04 = document.querySelector('#btn04');
+        let _btn05 = document.querySelector('#btn05');
+        let _result = document.querySelector('#result');
+        
+        _btn01.onclick=function(){
+            // _result.style.height='400px';
+            // _result.style.border='2px solid black';
+            // _result.style.borderRadius='10px';
+            // _result.style.padding='1em';
+            _result.style.display='block';
+        }
+
+        _btn02.onclick=function(){            
+            _result.style.height='0px';
+        }
+    </script>
+</body>
+</html>
