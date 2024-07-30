@@ -14,10 +14,15 @@
         }
         .result{
             width:500px;
-            height:200px;
+            height:100px;
             margin:0 auto;
             border:1px solid black;
             padding:1em;
+            font-weight:900;
+            font-size:4em;
+            text-align:center;
+            opacity:0;
+            transition:opacity 0.3s;
         }
         hr{
             margin:50px;
@@ -27,14 +32,70 @@
 <body>
     <h1>2025학년도 수시합격 모의계산기</h1>
     <div class="input-score">
-        <label>국어점수 : <input type="text"></label>
-        <label>영어점수 : <input type="text"></label>
-        <label>수학점수 : <input type="text"></label>
-        <label>과학점수 : <input type="text"></label>
-        <label>사회점수 : <input type="text"></label>
-        <button>성적처리</button>
+        <label>국어점수 : <input type="text" id="kor"></label>
+        <label>영어점수 : <input type="text" id="eng"></label>
+        <label>수학점수 : <input type="text" id="mat"></label>
+        <label>과학점수 : <input type="text" id="scn"></label>
+        <label>사회점수 : <input type="text" id="soc"></label>
+        <button id="btn">성적처리</button>
     </div>
     <hr>
-    <div class="result"></div>
+    <div class="result" id="result"></div>
+    <script>
+        let korEl = document.querySelector('#kor');
+        let engEl = document.querySelector('#eng');
+        let matEl = document.querySelector('#mat');
+        let scnEl = document.querySelector('#scn');
+        let socEl = document.querySelector('#soc');
+        let btnEl = document.querySelector('#btn');
+        let resultEl = document.querySelector('#result');
+
+        btnEl.onclick = function(){
+            // 입력자료가 있는가?
+            if(korEl.value === ''){
+                alert('국어점수를 입력해주세요');
+                korEl.focus();
+            }else if(engEl.value === ''){
+                alert('영어점수를 입력해주세요');
+                engEl.focus();
+            }else if(matEl.value === ''){
+                alert('수학점수를 입력해주세요');
+                matEl.focus();
+            }else if(scnEl.value === ''){
+                alert('과학점수를 입력해주세요');
+                scnEl.focus();
+            }else if(socEl.value === ''){
+                alert('사회점수를 입력해주세요');
+                socEl.focus();
+            }
+
+
+            // 입력 점수가 정해진 범위인가(0 ~ 100)
+            if(korEl.value < 0 || korEl.value > 100){
+                alert(`점수는 0~100사이에 범위여야 합니다`);
+                korEl.value='';
+                korEl.focus();
+            }else if(engEl.value < 0 || engEl.value > 100){
+                alert(`점수는 0~100사이에 범위여야 합니다`);
+                engEl.value='';
+                engEl.focus();
+            }else if(matEl.value < 0 || matEl.value > 100){
+                alert(`점수는 0~100사이에 범위여야 합니다`);
+                matEl.value='';
+                matEl.focus();
+            }else if(scnEl.value < 0 || scnEl.value > 100){
+                alert(`점수는 0~100사이에 범위여야 합니다`);
+                scnEl.value='';
+                scnEl.focus();
+            }else if(socEl.value < 0 || socEl.value > 100){
+                alert(`점수는 0~100사이에 범위여야 합니다`);
+                socEl.value='';
+                socEl.focus();
+            }
+
+            
+
+        }
+    </script>
 </body>
 </html>
