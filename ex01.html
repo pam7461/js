@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>자바스크립트 기초문법01</title>
+
 </head>
 <body>
-    
+    <h1 id="tit">자바스크립트 기초문법01</h1>
+
+    <h2>자바스크립트 작성위치</h2>
+    <ol>
+        <li>
+            <h4>인라인 스크립트</h4>
+            <p onclick="console.log('인라인 스크립트');">요소(element) 내부에서 스크립트 작성</p>
+        </li>
+        <li>
+            <h4 id="btn01">내부 스크립트</h4>
+            <p>문서(document) 내부에서 'script' 요소 작성</p>
+            <p>주의사항 : 반드시 요소가 준비된 후에 실행</p>
+        </li>
+    </ol>
+    <script>
+        document.querySelector('#btn01').onclick = function (){
+            document.querySelector('#tit').style.fontSize = '100px';
+        };
+    </script>
 </body>
 </html>
