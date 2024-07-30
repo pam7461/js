@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="result"></textarea>
+    <button id="btn">결합</button>
+    <script>
+        let data01; 
+        let result = document.querySelector('#result');
+        let btn = document.querySelector('#btn');
+
+        data01 = prompt('당신의 나이는?');
+        btn.onclick = function(){
+            result.innerHTML = data01 + '살';
+        }
+    </script>
+</body>
+</html>

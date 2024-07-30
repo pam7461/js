@@ -29,24 +29,42 @@
         let _result = document.querySelector('#result');
         
         _btn01.onclick=function(){
-           
+           _result.style.height=0;
         }
 
         _btn02.onclick=function(){            
-           
+            _result.style.height='400px';
         }
 
         _btn03.onclick=function(){            
-           
+           _result.innerHTML='안녕하세요';
         }
 
         _btn04.onclick=function(){            
-           
+           console.log(_result.innerHTML);
         }
 
         _btn05.onclick=function(){            
-           
+           _result.style.display='none';
         }
     </script>
+
+
+    <input type="text" name="num01" id="num01" value="10">
+    <input type="text" name="num02" id="num02">
+    <textarea name="result01" id="result01"></textarea>
+    <span id="btn05">결합</span>
+    <script>
+        let _data01 = document.querySelector('#num01');        
+        let _data02 = document.querySelector('#num02');
+        let _newResult = document.querySelector('#result01');
+        let _btn = document.querySelector('#btn05');
+        
+        _btn.onclick=function(){
+            console.log(1);
+        }
+       
+    </script>
+
 </body>
 </html>
