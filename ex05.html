@@ -40,6 +40,25 @@
         <li>감소1(변수--)</li>
         <li>1감소(--변수)</li>
     </ol>
+    <h2>비교연산자</h2>
+    <p>두개의 값을 비교하여 'true' or 'false'을 판단</p>
+    <ol>
+        <li>같다(==)</li>
+        <li>자료타입까지같다(===)</li>
+        <li>크다,초과(>)</li>
+        <li>작다,미만(<)</li>
+        <li>크거나 같다,이상(>=)</li>
+        <li>작거나 같다,이하(<=)</li>
+        <li>같지않다(!=)</li>
+        <li>자료타입까지같지않다(!==)</li>
+    </ol>
+    <h2>논리연산자</h2>
+    <p>비교 연산을 여러개 사용할대 추가적으로 사용되는 연산</p>
+    <ol>
+        <li>모두,그리고,이면서,AND(&&)</li>
+        <li>중 하나,또는,이거나,OR(||)</li>
+        <li>아니면,NOT(!())</li>
+    </ol>
     <p>console을 보세요</p>
     <script>
         console.log(`=====산술연산자=====`);
@@ -89,8 +108,27 @@
         console.log(`num04를 감소 1 = ${num04--}`);
         console.log(`num04 = ${num04}`);
 
+        console.log(`=====비교연산자=====`);
+        let data01 = 10;
+        let data02 = '10';
+        let data03 = 5;
+        let data04 = '5';
 
+        console.log(data01 == data02);
+        console.log(data01 === data02);
+        console.log(data01 > data03);
+        console.log(data01 < data03);
+        console.log(data02 > data04);
+        console.log(data01 >= data03);
+        console.log(data01 <= data03);
+        console.log(data01 != data02);
+        console.log(data01 !== data02);
 
+        console.log(`=====논리연산자=====`);
+        console.log(data01 == data02 && data03 === data04 && data01 >= data03);
+        console.log(data01 == data02 || data03 === data04 || data01 >= data03);
+        console.log(!(data01 == data02 && data03 === data04 && data01 >= data03));
+        console.log(!(data01 == data02 || data03 === data04 || data01 >= data03));
     </script>
 </body>
 </html>
