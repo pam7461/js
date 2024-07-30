@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초문법02</title>
+
+</head>
+<body>
+    <h1 id="tit">자바스크립트 기초문법02</h1>
+    <h2>자바스크립트 변수</h2>
+    <p>무엇이든(자료) 저장할 수 있는 공간</p>
+    <p>자세한 이야기는 console을 확인하세요</p>
+    <h2>자료의 종류</h2>
+    <ol>
+        <li>문자형(string)</li>
+        <li>숫자형(number)</li>
+        <li>논리형(boolean)</li>
+        <li>객체형(object)</li>
+        <li>함수형(function)</li>
+        <li>null</li>
+        <li>undefined</li>
+    </ol>
+    <script>
+        // 변수의 선언은 let 키워드를 사용
+        let num01 = 12;
+        let num02 = 15;
+        let result = 0;
+        // 변수에 값을 저장
+        num01 = 20;
+        result = num01 + num02;
+        console.log(result);
+        num01 = '홍길동';
+        num02 = '18';
+        result = num01 + num02;
+        console.log(result);
+        num01 = function(){
+            console.log(result);
+        }
+        num01();
+        num02 = document;
+        console.log(num02);
+
+
+        // 자료의 종류
+        let data01 = 10;
+        let data02 = '10';
+        let data03 = true;
+        let data04 = document;
+        console.log('data01의 자료형은 ' + typeof data01);
+        console.log('data02의 자료형은 ' + typeof data02);
+        console.log('data03의 자료형은 ' + typeof data03);
+        console.log('data04의 자료형은 ' + typeof data04);
+    </script>
+</body>
+</html>

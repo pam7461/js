@@ -12,13 +12,18 @@
     <h2>자바스크립트 작성위치</h2>
     <ol>
         <li>
-            <h4>인라인 스크립트</h4>
-            <p onclick="console.log('인라인 스크립트');">요소(element) 내부에서 스크립트 작성</p>
+            <h4 onclick="console.log('인라인 스크립트');">인라인 스크립트</h4>
+            <p>요소(element) 내부에서 스크립트 작성</p>
         </li>
         <li>
             <h4 id="btn01">내부 스크립트</h4>
             <p>문서(document) 내부에서 'script' 요소 작성</p>
             <p>주의사항 : 반드시 요소가 준비된 후에 실행</p>
+        </li>
+        <li>
+            <h4 id="btn02">외부 스크립트</h4>
+            <p>별도의 외부 js파일로 독립</p>
+            <p>원하는 문서에서 호출 사용함</p>
         </li>
     </ol>
     <script>
@@ -26,5 +31,6 @@
             document.querySelector('#tit').style.fontSize = '100px';
         };
     </script>
+    <script src="./js/ex01.js"></script>
 </body>
 </html>
