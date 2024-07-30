@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <h1>연산자(Operator)</h1>
+    <p>다양한 유형의 산술,논리적 연산을 수행한다.</p>
+    <h2>산술연산자</h2>
+    <p>number의 연산</p>
+    <ol>
+        <li>더하기(+)</li>
+        <li>빼기(-)</li>
+        <li>곱하기(*)</li>
+        <li>나누기(/)</li>
+        <li>나머지(%)</li>
+    </ol>
+    <h2>문자연산자</h2>
+    <p>string의 연산</p>
+    <ol>
+        <li>결합(+)</li>
+    </ol>
+    <h2>대입연산자</h2>
+    <p>오른쪽항이 왼족항으로 대입된다</p>
+    <ol>
+        <li>대입(=)</li>
+        <li>더하기대입(+=)</li>
+        <li>빼기대입(-=)</li>
+        <li>곱하기대입(*=)</li>
+        <li>나누기대입(/=)</li>
+        <li>나머지대입(%=)</li>
+    </ol>
+    <h2>증감연산자</h2>
+    <p>변수의 값을 1증가 또는 1감소 연산자(유일한 단항연산자)</p>
+    <ol>
+        <li>증가1(변수++)</li>
+        <li>1증가(++변수)</li>
+        <li>감소1(변수--)</li>
+        <li>1감소(--변수)</li>
+    </ol>
+    <p>console을 보세요</p>
+    <script>
+        console.log(`=====산술연산자=====`);
+        let num01 = 15;
+        let num02 = 2;
+        let result;
+        result = num01 + num02;
+        console.log(`${num01}+${num02}=${result}`);
+        result = num01 - num02;
+        console.log(`${num01}-${num02}=${result}`);
+        result = num01 * num02;
+        console.log(`${num01}*${num02}=${result}`);
+        result = num01 / num02;
+        console.log(`${num01}/${num02}=${result}`);
+        result = num01 % num02;
+        console.log(`${num01}을 ${num02}로 나눈 나머지=${result}`);
+
+        console.log(`=====문자열연산자=====`);
+        let firstName = `hong`;
+        let lastName = `gildong`;
+        let fullName = firstName + lastName;
+        console.log(`${fullName}의 성은 ${firstName}입니다.`);
+
+        console.log(`=====대입연산자=====`);
+        let num03 = 50;
+        console.log(`num03 = ${num03}`);
+        num03 += 3;
+        console.log(`num03을 3 증가 = ${num03}`);
+        num03 -= 20;
+        console.log(`num03을 20 감소 ${num03}`);
+        num03 *= 2;
+        console.log(`num03을 2 곱셈 ${num03}`);
+        num03 /= 3;
+        console.log(`num03을 3 나눗셈 ${num03}`);
+        num03 %= 3;
+        console.log(`num03을 3으로 나눈 나머지 ${num03}`);        
+
+        console.log(`=====증감연산자=====`);
+        let num04 = 50;
+        console.log(`num04 = ${num04}`);        
+        console.log(`num04를 1 증가 = ${++num04}`);
+        console.log(`num04 = ${num04}`);
+        console.log(`num04를 증가 1 = ${num04++}`);
+        console.log(`num04 = ${num04}`);
+        console.log(`num04를 1 감소 = ${--num04}`);
+        console.log(`num04 = ${num04}`);
+        console.log(`num04를 감소 1 = ${num04--}`);
+        console.log(`num04 = ${num04}`);
+
+
+
+    </script>
+</body>
+</html>
