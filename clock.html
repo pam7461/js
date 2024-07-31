@@ -53,10 +53,33 @@
 <body>
     <section class="clock">
         <div class="container">
-            <article class="art hour">00</article>
-            <article class="art minu">00</article>
-            <article class="art seco">00</article>
+            <article class="art hour" id="hour">08</article>
+            <article class="art minu" id="minu">46</article>
+            <article class="art seco" id="seco">56</article>
         </div>
     </section>
+        
+    <script>
+        let _hour = document.querySelector('#hour');
+        let _minu = document.querySelector('#minu');
+        let _seco = document.querySelector('#seco');
+        let arrClock = document.querySelectorAll('.art');
+        console.log(_hour.innerHTML);
+        console.log(_minu.innerHTML);
+        console.log(_seco.innerHTML);
+        console.log(arrClock[0].innerHTML);
+        console.log(arrClock[1].innerHTML);
+        console.log(arrClock[2].innerHTML);
+
+        for(let idx=0;idx<=arrClock.length-1;idx++){
+            console.log(arrClock[idx].innerHTML);
+        }
+        for(let prop of arrClock){
+            console.log(prop.innerHTML);
+        }
+        arrClock.forEach(function(prop){
+            console.log(prop.innerHTML);
+        })
+    </script>
 </body>
 </html>
