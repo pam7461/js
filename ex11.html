@@ -8,10 +8,58 @@
 <body>
     <h1>객체(Object)</h1>
     <h2>내장 객체</h2>
+    <p>객체의 생성은 'new' 키워드를 사용한다</p>
 
 
     <script>
-        
+        console.log(`====== new ======`);
+        let car = new Object();
+        car.name = '카니발';
+        car.price = 40000000;
+        car.model = 'VIP';
+
+
+        console.log(car);
+        console.log(car.name);
+        console.log(car.price);
+        console.log(car.model);
+        for(let prop in car){
+            console.log(car[prop]);
+        }
+
+        let motor = {
+            name:'스타리아',
+            price:39999999,
+            model:'special'
+        }
+        for(let prop in motor){
+            console.log(motor[prop]);
+        }
+
+        console.log(`====== 날짜객체 ======`);
+        let _today = new Date();
+        console.log(`올해는 ${_today.getFullYear()}년 입니다`);
+        console.log(`현재 시간은 ${_today.getHours()}:${_today.getMinutes()}:${_today.getSeconds()} 입니다`);
+        console.log(`현재 날짜와 시간은 ${_today}`);
+        _today.setFullYear(2002);
+        _today.setMonth(3);
+        _today.setDate(15);
+        console.log(`현재 날짜와 시간은 ${_today}`);
+
+        console.log(`====== 수학객체 ======`);
+        let pi = 3.141592;
+        console.log(pi);
+        let _pi = Math.PI;
+        let max = Math.max(-50,-1,0,true);
+        let min = Math.min(50,1,15,false);
+        let x = Math.pow(10,2);
+        let y = Math.round(Math.PI,2);
+        let z = Math.random();
+        let root = Math.sqrt(50);
+        console.log(_pi);
+        console.log(`Math.max(-50,-1,0,true) = ${max}`);
+        console.log(`Math.min(50,1,15,false) = ${min}`);
+        console.log(true + 1);
     </script>
 </body>
 </html>
