@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop(반복문)</title>
+</head>
+<body>
+    <h1>Loop(반복문)</h1>
+    <ul>
+        <li>for(초기값;조건식;증감식)</li>
+        <li>for(배열구성요소 of 배열)</li>
+        <li>배열.forEach(배열구성요소,인덱스,배열)</li>
+        <li style="color:red;">for(키 in 객체)</li>
+    </ul>
+
+    <script>
+
+        let arr =   [
+            '홍길동',
+            365,
+            function(){console.log('함수')},
+            true
+        ];
+        console.log(`arr의 자료 타입 => ${typeof arr}`);
+        console.log(`arr의 2번째 요소 => ${arr[1]}`);
+        console.log(`arr의 3번째 요소 => ${arr[2]}`);
+        let obj = {
+            name:'홍길동',
+            day:365,
+            fn:function(){
+                console.log('함수');
+            },
+            bool:true,
+            fn2:function(val){
+                console.log(val);
+            }
+        };
+        console.log(`obj의 자료 타입 => ${typeof obj}`);
+        console.log(`obj의 day => ${obj.day}`);
+        obj.fn();
+        obj.name = '홍길순';
+        console.log(obj.name);
+        obj.fn2('안녕하세요');      
+
+        console.log(`===== for in(개체 반복문)`);
+        let obJ = {
+            a:1,
+            b:'홍길동',
+            c:'20살'
+        }
+
+        for(let prop in obJ){
+            console.log(`${obJ[prop]}`);
+        }
+
+        for(let prop in document){
+            console.log(document[prop]);
+        }
+    </script>
+</body>
+</html>
