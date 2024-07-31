@@ -4,14 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>시계</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        :root{
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size:100px;
+            color:darkred;
+        }
+        .container{
+            border:1px solid black;
+            padding:20px;
+            position:fixed;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap:40px;
+        }
+        .container::before,.container::after{
+            content:':';
+            display:block;
+            position:absolute;
+            left:125px;
+            top:50%;
+            transform:translate(0,-50%);
+            animation: bounce 1s linear infinite;
+        }
+        .container::after{
+            left:265px;
+        }
+
+
+
+        @keyframes bounce {
+            0%{opacity:1;}
+            20%{opacity:1;}
+            40%{opacity:0;}
+            60%{opacity:0;}
+            80%{opacity:1;}
+            100%{opacity:1;}
+        }
+    </style>
 </head>
 <body>
-    <div class="clock">
+    <section class="clock">
         <div class="container">
-            <div class="hour">00</div>
-            <div class="minu">00</div>
-            <div class="seco">00</div>
+            <article class="art hour">00</article>
+            <article class="art minu">00</article>
+            <article class="art seco">00</article>
         </div>
-    </div>
+    </section>
 </body>
 </html>
