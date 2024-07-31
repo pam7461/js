@@ -22,7 +22,7 @@
             top:50%;
             transform:translate(-50%,-50%);
             display:grid;
-            grid-template-columns:1fr 1fr 1fr;
+            grid-template-columns:repeat(3,100px);
             gap:40px;
         }
         .container::before,.container::after{
@@ -64,9 +64,11 @@
         let _minu = document.querySelector('#minu');
         let _seco = document.querySelector('#seco');
         let arrClock = document.querySelectorAll('.art');
+
         console.log(_hour.innerHTML);
         console.log(_minu.innerHTML);
-        console.log(_seco.innerHTML);
+        console.log(_seco.innerHTML);        
+        
         console.log(arrClock[0].innerHTML);
         console.log(arrClock[1].innerHTML);
         console.log(arrClock[2].innerHTML);
@@ -80,6 +82,48 @@
         arrClock.forEach(function(prop){
             console.log(prop.innerHTML);
         })
+
+        let tmp = '';
+
+        window.setInterval(function(){
+            let _now = new Date();
+
+            tmp = _now.getHours();
+            if(tmp<=9){
+                tmp = '0' + tmp;
+            }
+            _hour.innerHTML = tmp;
+
+
+            tmp = _now.getMinutes();
+            if(tmp<=9){
+                tmp = '0' + tmp;
+            }
+            _minu.innerHTML = tmp;
+
+            tmp = _now.getSeconds();
+            if(tmp<=9){
+                tmp = '0' + tmp;
+            }
+            _seco.innerHTML = tmp;
+        },1000);
+           
+        setInterval(() => {
+            let nowHour = new Date();
+            nowHour = nowHour.getHours();            
+            if(nowHour>=6 && nowHour<=16){
+                for(let prop of arrClock){
+                    prop.style.color='darkred';
+                }
+            }else{
+                for(let prop of arrClock){
+                    prop.style.color='lightblue';
+                }
+            }
+        }, 1000);
+
+        
+        
     </script>
 </body>
 </html>
