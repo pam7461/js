@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM(브라우저 객체 모델)</title>
+</head>
+<body id="body-id" style="background-color:#f00;">
+    <h1>BOM(브라우저 객체 모델)</h1>
+    <ul>
+        <li>
+            <span>window object</span>
+            <ul>
+                <li>document object</li>
+                <li>screen object</li>
+                <li>location object</li>
+                <li>history object</li>
+                <li>navigator object</li>
+            </ul>
+        </li>
+    </ul>
+
+    <button id="btn01">네이버 열기</button>
+    <button id="btn02">멈춤</button>
+    <script>
+        console.log(`===== window object =====`);
+        let _btn01 = document.querySelector('#btn01');
+        _btn01.onclick=function(){
+            open(`https://www.naver.com`,`naver`,`width=350,height=400,left=50`);
+            console.log(`console,open,alert,prompt,confirm,setInterval...`);
+        }
+          
+        console.log(`====== setInterval ======`);
+        let _body = document.querySelector('body');
+        let changeColor = window.setInterval(function(){
+            let ran = Math.random();
+            if(ran>=0 && ran<=0.33){
+                _body.style.backgroundColor = '#f00';
+            }else if(ran>0.33 && ran<=0.66){
+                _body.style.backgroundColor = '#0f0';
+            }else{
+                _body.style.backgroundColor = '#00f';
+            }
+        },1000);
+
+
+        let btnStop = document.querySelector('#btn02');
+        btnStop.onclick =function(){
+            window.clearInterval(changeColor);
+        }
+    </script>
+</body>
+</html>
