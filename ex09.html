@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop(반복문)</title>
+</head>
+<body>
+    <h1>Loop(반복문)</h1>
+    <ul>
+        <li>for(초기값;조건식;증감식)</li>
+        <li style="color:red;">for(배열구성요소 of 배열)</li>
+        <li style="color:green;">배열.forEach(배열구성요소,인덱스,배열)</li>
+        <li>for in</li>
+    </ul>
+    <script>
+        let _lists = document.querySelectorAll('ul li');
+        
+        console.log(`===== FOR =====`);        
+        let lastIdx = _lists.length - 1;
+        for(let idx = 0; idx <= lastIdx;idx++){
+            console.log(`_lists[${idx}]:${_lists[idx].innerHTML}`);
+        }
+
+        console.log(`\n\n`);
+        console.log(`===== FOR OF(배열요소 반복)=====`);
+        let cnt=0;
+        for(let arrayItem of _lists){
+            console.log(`_lists[${cnt++}]:${arrayItem.innerHTML}`);
+        }
+
+        console.log(`\n\n`);
+        console.log(`===== forEach(배열요소 반복)=====`);
+        _lists.forEach(function(para,idx){
+            console.log(`_lists[${idx}]:${para.innerHTML}`);
+        });
+    </script>
+</body>
+</html>
