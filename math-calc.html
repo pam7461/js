@@ -4,6 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>수학 계산기</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        :root{
+            font-family:'Noto Sans KR';
+            font-weight:500;
+            font-size:20px;
+        }
+        .header{
+            border-bottom:5px solid black;
+            padding:40px;
+            text-align:center;
+        }
+        .header h1{font-size:60px;}
+        .sec{
+            border-bottom:2px solid black;
+            padding:40px;
+        }
+        .sec .container{
+            max-width:1200px;
+            height:500px;
+            margin:0 auto;
+            position:relative;
+        }
+        .sec .container .art{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background:#fff;
+            display:grid;
+            grid-template-columns:1fr;
+            grid-template-rows:auto auto auto auto auto;
+            gap:50px;
+        }
+        .sec .container .art .btn{
+            font-size:2em;
+        }
+    </style>
 </head>
 <body>
     <section class="wrap">
