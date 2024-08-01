@@ -119,26 +119,11 @@
         for(let prop of btnArt){
             prop.onclick = function(){
                 btnTxt = prop.innerHTML;
-                if(btnTxt == 'circle'){
-                    // 원의너비
-                    // for(let prop of artEls){
-                    //     prop.classList.remove('active');
-                    // }
-                    // artEls[0].classList.add('active');
+                if(btnTxt == 'circle'){                    
                     changeArt(0);
                 }else if(btnTxt == 'square'){
-                    // 사각형 너비
-                    // for(let prop of artEls){
-                    //     prop.classList.remove('active');
-                    // }
-                    // artEls[1].classList.add('active');
                     changeArt(1);
                 }else if(btnTxt == 'factorial'){
-                    // 계승
-                    // for(let prop of artEls){
-                    //     prop.classList.remove('active');
-                    // }
-                    // artEls[2].classList.add('active');
                     changeArt(2);
                 }
             }
