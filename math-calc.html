@@ -17,6 +17,16 @@
             text-align:center;
         }
         .header h1{font-size:60px;}
+        .header span{
+            display:inline-block;
+            margin:20px;
+            font-size:2em;
+            text-transform:uppercase;
+            cursor:pointer;
+        }
+        .header span:hover{
+            color:blue;
+        }
         .sec{
             border-bottom:2px solid black;
             padding:40px;
@@ -34,13 +44,27 @@
             top:0;
             bottom:0;
             background:#fff;
-            display:grid;
+            display:none;
             grid-template-columns:1fr;
             grid-template-rows:auto auto auto auto auto;
             gap:50px;
         }
+        .sec .container .art.active{
+            display:grid;
+        }
         .sec .container .art .btn{
             font-size:2em;
+        }
+        .footer{
+            padding:20px;
+        }
+        .footer .result{
+            max-width:1200px;
+            margin:0 auto;
+            border:1px solid red;
+            padding:20px;
+            font-size:1.5em;
+            text-align:center;
         }
     </style>
 </head>
@@ -49,11 +73,16 @@
         <header class="header">
             <div class="contaianer">
                 <h1>수학계산기</h1>
+                <nav>
+                    <span>circle</span>
+                    <span>square</span>
+                    <span>factorial</span>
+                </nav>
             </div>
         </header>
-        <section class="sec">
+        <section class="sec">            
             <div class="container">
-                <article class="art art-circle">
+                <article class="art art-circle active">
                     <h2>원의 너비</h2>
                     <p>아래 입력란에 원의 반지름을 입력하세요</p>
                     <input type="text" id="circle-r" placeholder="반지름 r">
