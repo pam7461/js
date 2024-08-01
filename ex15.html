@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(function)</title>
+</head>
+<body>
+    <h1>함수(function)</h1>
+    <p>코드(들)를 저장한 객체</p>
+    <p>객체,함수 공통점 : 호출</p>
+    <p>객체,함수 차이점 : 값을 전달할 수 있다</p>
+    <ol>
+        <li>기명함수</li>
+        <li>익명함수</li>
+        <li>즉시실행함수</li>
+    </ol>
+    <h2>기명함수</h2>
+    <p>함수명을 가지는 함수</p>
+    <p>function name([param1],[param2]...){segment}</p>
+    <script>
+        console.log(`======= 기명함수 ========`);
+        let _now = new Date();
+        function fn01(){
+            console.log('기명함수01');
+        }
+        let fn02 = function(){
+            console.log('기명함수02');
+        }
+        let fn03 = function(par01){
+            console.log(par01);
+        }
+        let fn04 = function(par01,par02){
+            console.log(`par01=${par01}, par02=${par02}`);
+        }
+        function fn05(par01,par02,par03){
+            console.log(`par01=${par01}, par02=${par02},par03=${par03}`);
+        }
+        let fn06 = function(p1,p2){
+            return p1+p2;
+        }
+        console.log(_now.getHours());
+        fn01();
+        fn02();
+        fn03('기명함수03');
+        fn04(1,2,3);
+        fn05(10,5,'+');
+        console.log(fn06(10,20));
+
+
+        let num01 = Number(prompt('덧셈할 숫자1을 입력하세요'));
+        console.log(typeof num01);
+        let num02 = Number(prompt('덧셈할 숫자2을 입력하세요'));
+        console.log(typeof num02);
+        alert(`${num01} + ${num02} = ${fn06(num01,num02)}`);
+
+
+        let num03 = String(10);
+        let num04 = String(20);
+        console.log(num03+num04);
+    </script>
+</body>
+</html>
