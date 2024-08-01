@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen, Location, History</title>
+</head>
+<body>
+    <h1>Screen, Location, History</h1>
+    <h2>screen(모니터)</h2>
+    <h2>location(브라우저)</h2>
+    <h2>hidtory(방문기록)</h2>
+    
+
+    <script>
+        console.log(`========== SCREEN ===========`);
+        console.log(`모니터의 가로 너비는 = ${screen.width}`);
+        console.log(`모니터의 가로 높이는 = ${screen.height}`);
+        console.log(`모니터의 바탕화면 높이는 = ${screen.availHeight}`);
+        console.log(`모니터의 색상깊이는 = ${screen.colorDepth}`);
+        console.log(`\n\n`);
+        console.log(`========== LOCATION ===========`);
+        console.log(`브라우저의 주소 = ${location.href}`);
+        // location.href='https://www.naver.com';
+        setInterval(function(){
+            location.reload();
+        },2000);
+        console.log(`\n\n`);
+        console.log(`========== HISTORY ===========`);
+
+    </script>
+</body>
+</html>

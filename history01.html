@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>히스토리1</h1>
+    <button class="btn" id="btn01">이전</button>
+    <button class="btn" id="btn02">다음</button>
+    <script>
+        let btnPrev = document.querySelector('#btn01');
+        let btnNext = document.querySelector('#btn02');
+
+        // 이전으로 이동하는 이벤트
+        btnPrev.onclick = function(){
+            history.back();
+        }
+        // 다음으로 이동하는 이벤트
+        btnNext.onclick = function(){
+            history.forward();
+        }
+    </script>
+</body>
+</html>
