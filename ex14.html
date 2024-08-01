@@ -9,8 +9,18 @@
     <h1>navigator(브라우저 정보, 운영체제 정보)</h1>
     <script>
         console.log(`========= navigator =========`);
-        console.log(`브라우저 애플리케이션 이름 = ${navigator.appName}`);
-        
+        let info = navigator.userAgent;
+        info = info.toLowerCase();        
+        if(info.indexOf('windows')>=0){
+            // windows
+            document.write('<h2>윈도우 환경입니다.</h2>');
+        }else if(info.indexOf('android')>=0){
+            // android
+            document.write('<h2>안드로이드 환경입니다.</h2>');
+        }else if(info.indexOf('iphone')>=0){
+            // iphone
+            document.write('<h2>아이폰 환경입니다.</h2>');
+        }
     </script>
 </body>
 </html>
